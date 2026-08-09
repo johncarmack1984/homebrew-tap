@@ -4,7 +4,7 @@
 class Glslint < Formula
   desc "GLSL checker and language server for luma.gl/deck.gl shaders"
   homepage "https://github.com/johncarmack1984/glslint"
-  version "0.7.0"
+  version "0.8.0"
   license any_of: ["MIT", "Apache-2.0"]
 
   # glslint shells out to glslangValidator (the Khronos GLSL reference compiler)
@@ -14,19 +14,19 @@ class Glslint < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/johncarmack1984/glslint/releases/download/v0.7.0/glslint-aarch64-apple-darwin"
-      sha256 "6d481a3d0e4d34ff206d741add962318f1acaf903a6a64d24ec842ab556b1118"
+      url "https://github.com/johncarmack1984/glslint/releases/download/v0.8.0/glslint-aarch64-apple-darwin"
+      sha256 "20f9ec11271ab94b51f458613434b19ca5e0fd78031b856156afcc63d8e29ab0"
     end
     on_intel do
-      url "https://github.com/johncarmack1984/glslint/releases/download/v0.7.0/glslint-x86_64-apple-darwin"
-      sha256 "5e272c48ac5528c787433ba661edcedb9ad494d2ffb130ddcb9966e8a34b98e0"
+      url "https://github.com/johncarmack1984/glslint/releases/download/v0.8.0/glslint-x86_64-apple-darwin"
+      sha256 "7fc2a1876d79e1886413dc0b2c704be37401ecd222856cd200ae0c5e1d7d2edc"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/johncarmack1984/glslint/releases/download/v0.7.0/glslint-x86_64-unknown-linux-gnu"
-      sha256 "0fdf5bdb990e7fc623ea42dba6f2308bb2cd7e6a061d170ac1725b038c2480f7"
+      url "https://github.com/johncarmack1984/glslint/releases/download/v0.8.0/glslint-x86_64-unknown-linux-gnu"
+      sha256 "58c249cf72bb7c8b3ab9dca733d7928456885174eda79041e32a18d77684146b"
     end
   end
 
