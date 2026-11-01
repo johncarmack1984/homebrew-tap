@@ -4,7 +4,6 @@
 class Glslint < Formula
   desc "GLSL checker and language server for luma.gl/deck.gl shaders"
   homepage "https://github.com/johncarmack1984/glslint"
-  version "0.8.1"
   license any_of: ["MIT", "Apache-2.0"]
 
   # glslint shells out to glslangValidator (the Khronos GLSL reference compiler)
@@ -14,19 +13,26 @@ class Glslint < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/johncarmack1984/glslint/releases/download/v0.8.1/glslint-aarch64-apple-darwin"
-      sha256 "401490333f44c802aa41355b318cf90a43ab692c79dde38e6265936f632ec496"
+      url "https://github.com/johncarmack1984/glslint/releases/download/v0.8.2/glslint-aarch64-apple-darwin"
+      sha256 "5a1289b1a5205b8614b13bfcc98d29b068782ef377ee216c4d11d6640d4be9a3"
     end
     on_intel do
-      url "https://github.com/johncarmack1984/glslint/releases/download/v0.8.1/glslint-x86_64-apple-darwin"
-      sha256 "9e032e117d3c65b229a3d117e9fdc62e46bb87b394a8ddba3a5eeefd901f809c"
+      url "https://github.com/johncarmack1984/glslint/releases/download/v0.8.2/glslint-x86_64-apple-darwin"
+      sha256 "08bf213d947f0767b29ab437d430996e2a0ccdeb37cf647584a96a38cc1872d2"
     end
   end
 
   on_linux do
+    on_arm do
+      # No arm64 build for this OS: the x86_64 url only lets the
+      # formula load here, and the arch requirement stops an install.
+      url "https://github.com/johncarmack1984/glslint/releases/download/v0.8.2/glslint-x86_64-unknown-linux-gnu"
+      sha256 "fc83bd87c6f1a37ee043c490258846e4efb8be0270bca34d48e052711b21c2b8"
+      depends_on arch: :x86_64
+    end
     on_intel do
-      url "https://github.com/johncarmack1984/glslint/releases/download/v0.8.1/glslint-x86_64-unknown-linux-gnu"
-      sha256 "0c2c205817ddf64f63c8d73d8fadf2b830593f57fa20cbaac7d2f84eaf24a117"
+      url "https://github.com/johncarmack1984/glslint/releases/download/v0.8.2/glslint-x86_64-unknown-linux-gnu"
+      sha256 "fc83bd87c6f1a37ee043c490258846e4efb8be0270bca34d48e052711b21c2b8"
     end
   end
 
